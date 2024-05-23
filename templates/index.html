@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="continer">
+    <h2>Enter Your Email to send OTP</h2>
+        <form action="/", method="POST">
+            <input type="email" name="emailID" class="email_verify" id="eID" placeholder="abc@gmail.com" required>
+            {% if res == 'invalid' %}
+                <p class="v", style="visibility: visible; color: red; margin: 10px;">{{res}}</p>
+            {% else %}
+                <p class="v", style="visibility: hidden;">Invalid Email</p>
+            {% endif %}
+            <input type="submit" name="submit" class="btn" id="s_btn" value="Send">
+        </form>
+</div>
+
+{% endblock %}

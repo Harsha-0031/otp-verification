@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Verfication</title>
+{% endblock %}
+
+{% block body %}
+<section class="continer">
+    <form action="/verify" method="POST">
+        <input type="text" name="verify" class="email_verify" id="verify" pattern="\d{6}" maxlength="6" minlength="6" required>
+        <input type="submit" name="submit" class="btn" id="submit">
+    </form>
+</section>
+
+{% endblock %}

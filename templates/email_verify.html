@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Email Verified</title>
+{% endblock %}
+
+{% block body %}
+<section class="continer">
+    <div class="img">
+        <img src="{{ url_for('static', filename='imgs/mark.png') }}" alt="verified">
+    </div>
+    <div class="msg">
+        <h3>Email Verified Successfully</h3>
+    </div>
+    <form action="/", method="GET">
+        <input type="submit" value="Back To Home" class="btn_invalid">
+    </form>
+</section>
+{% endblock %}

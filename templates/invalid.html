@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>invalid OTP</title>
+{% endblock %}
+
+{% block body %}
+<section class="continer">
+    <div class="img">
+        <img src="{{ url_for('static', filename='imgs/cross.png') }}" alt="invalid">
+    </div>
+    <div class="msg">
+        <h3>Invalid OTP</h3>
+    </div>
+    <form action="/", method="GET">
+        <input type="submit" value="Back To Home" class="btn_invalid">
+    </form>
+</section>
+{% endblock %}
